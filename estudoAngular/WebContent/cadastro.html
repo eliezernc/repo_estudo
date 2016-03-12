@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script type="text/javascript" src="js/controllers/pessoa-controller.js"></script>
+	<title>Cadastro de Pessoa</title>
+</head>
+<body>
+	<div ng-app="myApp" ng-controller="PessoaController">
+		
+		<form>
+			<label>Nome</label> <input ng-model='nome'><br/>
+			<label>Data Nascimento</label> <input ng-model='dataNascimento'><br/>
+			<label>Telefone</label> <input ng-model='telefone'><br/>
+			
+			<button ng-click="adicionarPessoa()">Incluir</button>
+		</form>
+		<br/>
+		<div>
+			<table border="1">
+				<tr>
+					<th>Nome</th>
+					<th>Data de Nascimento</th>
+					<th>Telefone</th>
+				</tr>
+				<tr ng-repeat="pessoa in pessoas">
+					<td>{{pessoa.nome}}</td>
+					<td>{{pessoa.dataNascimento}}</td>
+					<td>{{pessoa.telefone}}</td>
+				</tr>
+			</table>	
+		</div>
+		
+	</div>
+</body>
+</html>

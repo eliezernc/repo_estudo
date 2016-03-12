@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+
+	<title>Exemplo Angular</title>
+</head>
+<body ng-app>
+	<div ng-init="descricao=''">
+		<textarea rows="10" cols="5" ng-model="descricao">{{descricao}}</textarea>
+	</div>
+	
+	<p ng-show="descricao.length < 10">Maximo 10 caracteres</p>
+	<p>Voce tem ainda {{250 - descricao.length}}</p>
+	
+	<div>
+		<button ng-disabled="descricao.length < 10">Enviar</button>
+	</div>	
+	
+</body>
+</html>

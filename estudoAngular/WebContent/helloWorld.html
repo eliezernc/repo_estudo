@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html ng-app="hello">
+<head>
+<title>Hello World</title>
+
+<script src="js/angular/angular.js"></script>
+<script>
+	angular.module("hello", []);
+	angular.module("hello").controller("helloController", function ($scope) {
+		$scope.message = "Hello World!";
+		});
+</script>
+
+</head>
+<body>
+	<div ng-controller="helloController">
+		{{message}}
+	</div>
+</body>
+</html>
